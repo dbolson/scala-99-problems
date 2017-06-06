@@ -23,4 +23,11 @@ class MainTest extends FlatSpec {
 
     assert(result == expected)
   }
+
+  "p04" should "find the number of elements of a list" in {
+    val result = length(List(1, 1, 2, 3, 5, 8))
+    val expected = 6
+
+    assert(result == expected)
+  }
 }
