@@ -30,4 +30,11 @@ class MainTest extends FlatSpec {
 
     assert(result == expected)
   }
+
+  "p05" should "reverse a list" in {
+    val result = reverse(List(1, 1, 2, 3, 5, 8))
+    val expected = List(8, 5, 3, 2, 1, 1)
+
+    assert(result == expected)
+  }
 }

@@ -19,5 +19,13 @@ object Main {
     case (_, Nil) => throw new NoSuchElementException
   }
 
-  def length[A](l: List[A]): Int = ???
+  def length[A](l: List[A]): Int = {
+    def go[A](currLength: Int, currList: List[A]): Int = currList match {
+      case Nil => currLength
+      case _ :: tail => go(currLength + 1, tail)
+    }
+    go(0, l)
+  }
+
+  def reverse[A](l: List[A]): List[A] = ???
 }
