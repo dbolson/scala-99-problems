@@ -27,5 +27,17 @@ object Main {
     go(0, l)
   }
 
-  def reverse[A](l: List[A]): List[A] = ???
+  /*
+  def reverse[A](l: List[A]): List[A] = {
+    def go[A](remList: List[A], currList: List[A]): List[A] = remList match {
+      case Nil => currList
+      case h :: tail => go(tail, h +: currList)
+    }
+    go(l, List.empty)
+  }
+  */
+  def reverse[A](l: List[A]): List[A] =
+    l.foldLeft(List[A]()) { (acc, curr) => curr :: acc }
+
+  def flatten[A](l: List[A]): List[A] = ???
 }

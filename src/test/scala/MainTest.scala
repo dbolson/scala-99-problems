@@ -37,4 +37,11 @@ class MainTest extends FlatSpec {
 
     assert(result == expected)
   }
+
+  "p06" should "flatten a nested list structure" in {
+    val result = flatten(List(List(1, 1), 2, List(3, List(5, 8))))
+    val expected = List(1, 1, 2, 3, 5, 8)
+
+    assert(result == expected)
+  }
 }
